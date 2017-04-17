@@ -1,0 +1,9 @@
+sut:
+  image: golang:1.8.1-alpine
+  command: /go/run_tests.sh
+  volumes:
+    - .:/go/
+  links:
+    - web
+web:
+  build: .
